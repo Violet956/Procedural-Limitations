@@ -1,4 +1,4 @@
-#include "\\JH-server\home\¾À´í³ÌÐò\cpu.h"
+#include "cpu.h"
 #include<bits\stdc++.h>
 #include <TlHelp32.h>
 #define ArraySize(ptr)    (sizeof(ptr) / sizeof(ptr[0]))
@@ -257,7 +257,7 @@ ULONG PerfDataGetCPUUsage(DWORD dwProcessId) {
 
 int main(void) {
 	LPCSTR ListApps[]{
-        "Connect-SAXI-SERVER.exe"
+        "app.exe"
     };
     // StopMyService();
     DWORD dwPid = 0;
@@ -281,8 +281,8 @@ int main(void) {
         {
         	if(kkksc03>=20)
         	{
-        		system("taskkill /f /t /im Connect-SAXI-SERVER.exe");
-        		system("C:\\Connect-SAXI-SERVER.exe");
+        		system("taskkill /f /t /im app.exe");
+        		system("C:\\app.exe");
         		
         		FindProcessPid(ListApps[0], dwPid);
         		PID_CX=dwPid;
